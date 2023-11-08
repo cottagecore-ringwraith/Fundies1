@@ -31,8 +31,8 @@ interface INamedThing {
 //
 
 fun renderNamedThings(toRender: List<INamedThing>): String {
-    // return toRender.map { it.getName() }.joinToString(", ")
-    return toRender.joinToString(", ") { it.getName() }
+     return toRender.map { it.getName() }.joinToString(", ")
+//    return toRender.joinToString(", ") { it.getName() }
 }
 
 data class NamedInt(val num: Int): INamedThing {

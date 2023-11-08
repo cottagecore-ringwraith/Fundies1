@@ -32,8 +32,7 @@ fun affirmTillDone(affirmation: String){
     do {
         println(affirmation)
         println(promptPhrase)
-    } while (input() == affirmation)
-    println(exitResponse)
+    } while (input() != exitResponse)
     println(finished)
 }
 
