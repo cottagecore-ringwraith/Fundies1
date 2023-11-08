@@ -30,8 +30,9 @@ interface INamedThing {
 //           Hint: joinToString is your friend :)
 //
 
-fun renderNamedThings(in: List<INamedThing>): String {
-
+fun renderNamedThings(toRender: List<INamedThing>): String {
+    // return toRender.map { it.getName() }.joinToString(", ")
+    return toRender.joinToString(", ") { it.getName() }
 }
 
 data class NamedInt(val num: Int): INamedThing {
@@ -53,7 +54,7 @@ fun main() {
     MyTestSuit.doTheTests()
 }
 
-private object MyTestSuit{
+object MyTestSuit{
     // i have to do this because im doing a proper kotlin file, instead of a script
     // "this" in runEnabledTests isnt avalible in a proper kotlin file.
     // it does the same stuff that you would expect

@@ -33,3 +33,5 @@ Fundies1.iml
 .Trashes
 ehthumbs.db
 Thumbs.db
+/out/
+src/main/kotlin/kotlin.iml

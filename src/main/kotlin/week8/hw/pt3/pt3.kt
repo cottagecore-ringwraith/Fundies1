@@ -55,11 +55,11 @@ private object MyTestSuit{
 
     @EnabledTest
     fun testStartsWithY() {
-        testSame(
-            // the name of the function to test
-            // its expected result
-            // some text comment (with commmas)
-        )
+//        testSame(
+//            // the name of the function to test
+//            // its expected result
+//            // some text comment (with commmas)
+//        )
     }
 
     fun doTheTests() {
