@@ -2,7 +2,7 @@ package week8.hw.pt3
 
 import khoury.runEnabledTests
 import khoury.EnabledTest
-import khoury.testSame
+
 
 // -----------------------------------------------------------------
 // Homework 5, Problem 3
@@ -40,7 +40,14 @@ val sepCard = "|"
 val sepTag = ","
 // (just useful values for
 // the separation characters)
-
+class TaggedFlashCard(val FrontText: String, val BackText: String, val Tags: List<String>) {
+    fun isTagged(tag: String): Boolean {
+        return tag in Tags // looks strange but returns true if tag is in tags :)
+    }
+    fun fileFormat(): String {
+        return listOf(FrontText,BackText,Tags.joinToString(sepTag)).joinToString(sepCard)
+    }
+}
 
 
 fun main() {
